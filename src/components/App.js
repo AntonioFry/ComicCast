@@ -3,19 +3,21 @@ import './App.css';
 import NavBar from './NavBar/NavBar';
 import Home from './Home/Home';
 import { Route } from 'react-router-dom';
+import { getCharacter } from '../api/apiCalls';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
+      featuredCharacter: {},
+      suggestedCharacters: [],
       error: ''
     }
   }
 
   componentDidMount = async () => {
     try {
-      const response = await fetch(`https://www.superheroapi.com/api.php/1983143645120471/621`)
-      const result = await response.json();
+      const result = await getCharacter(620);
       console.log(result);
     } catch (error) {
       console.log(error);
@@ -26,7 +28,9 @@ class App extends Component {
     return (
       <main>
         <NavBar />
-        <Route exact path="/" render={<Home />} />
+        <Route exact path="/" render={() => <Home />} />
+        <Route exact path="/Favorites" render={() => <Favorites />} />
+        <Route exact path="/Search" render={() => <Search />} />
       </main>
     )
   }
