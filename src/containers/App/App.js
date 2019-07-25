@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavBar from './NavBar/NavBar';
-import Home from './Home/Home';
+import NavBar from '../../components/NavBar/NavBar';
+import Home from '../../components/Home/Home';
 import { Route } from 'react-router-dom';
-import { getCharacter } from '../api/apiCalls';
+import { getCharacter } from '../../api/apiCalls';
 
 class App extends Component {
   constructor() {
