@@ -4,6 +4,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Home from '../../components/Home/Home';
 import { Route } from 'react-router-dom';
 import { getCharacter } from '../../api/apiCalls';
+import Search from '../../components/Seacrh/Search';
 
 class App extends Component {
   constructor() {
@@ -29,7 +30,7 @@ class App extends Component {
       <main>
         <NavBar />
         <Route exact path="/" render={() => <Home />} />
-        <Route exact path="/Favorites" render={() => <Favorites />} />
+        {/* <Route exact path="/Favorites" render={() => <Favorites />} /> */}
         <Route exact path="/Search" render={() => <Search />} />
       </main>
     )
