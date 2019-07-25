@@ -4,8 +4,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      featuredCharacter: {},
-      suggestedCharacters: []
+      
     }
   }
 
