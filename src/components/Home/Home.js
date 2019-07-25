@@ -11,9 +11,15 @@ class Home extends Component {
   render() {
     return (
       <section>
-        <div>
+        <article>
           <img />
-        </div>
+          <div>
+            <p></p>
+          </div>
+        </article>
+
+        
+        
       </section>
     )
   }
