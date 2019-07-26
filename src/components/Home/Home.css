@@ -1,0 +1,29 @@
+.home-section {
+  max-height: 900px;
+}
+
+.featured-character-article {
+  display: flex;
+  height: 250px;
+  margin: auto;
+  width: 80%;
+}
+
+.featured-character-img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.featured-character-info {
+  background-color: black;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.featured-character-text {
+  color: white;
+}
+
+h2 {
+  margin: 0px 0px 10px
+}
