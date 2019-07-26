@@ -24,6 +24,7 @@ class Home extends Component {
             <p className="featured-character-text">Overview: {overview}</p>
           </div>
         </article>
+        <h2 className="suggested-character-heading">Suggested Characters</h2>
         <CharacterCarousel suggestedCharacters={this.props.suggestedCharacters}/>
       </section>
     )
