@@ -5,8 +5,8 @@ import Home from '../../components/Home/Home';
 import { Route } from 'react-router-dom';
 import { getCharacters } from '../../api/apiCalls';
 import Search from '../../components/Seacrh/Search';
-import loadingGif from '../../images/Double-Ring.gif';
-import { throwStatement } from '@babel/types';
+import { connect } from 'react-redux';
+import { setCharacters } from '../../actions';
 
 class App extends Component {
   constructor() {
@@ -46,6 +46,7 @@ class App extends Component {
       this.setState({ allCharacters });
       this.getFeaturedCharacter();
       this.getRandomCharacters();
+      this.props.setCharacters(allCharacters)
     } catch (error) {
       this.setState({ error: error.message });
     }
@@ -66,7 +67,10 @@ class App extends Component {
       </main>
     )
   }
-
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  setCharacters: characters => dispatch(setCharacters(characters))
+})
+
+export default connect(null, mapDispatchToProps)(App);
