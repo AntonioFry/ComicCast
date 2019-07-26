@@ -5,7 +5,7 @@ import './NavBar.css';
 const NavBar = () => {
   return (
     <nav>
-      <h1>Placeholder</h1>
+      <h1>ComicCast</h1>
       <div className="navigation-links-container">
         <NavLink className="navigation-links" to="/">Home</NavLink>
         <NavLink className="navigation-links" to="/Favorites">Favorites</NavLink>
