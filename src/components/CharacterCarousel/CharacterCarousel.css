@@ -9,3 +9,12 @@
   overflow-y: hidden;
   padding: 10px;
 }
+
+.left {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
