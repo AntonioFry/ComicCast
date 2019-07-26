@@ -13,7 +13,7 @@ class App extends Component {
     super();
     this.state = {
       allCharacters: [],
-      featuredCharacter: null,
+      featuredCharacter: {},
       suggestedCharacters: [],
       error: ''
     }
@@ -56,8 +56,8 @@ class App extends Component {
     return (
       <main>
         <NavBar />
-        {!this.state.featuredCharacter && <img src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
-        {this.state.featuredCharacter && <Route exact path="/" render={() => <Home 
+        {!this.state.suggestedCharacters.length && <img src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
+        {this.state.suggestedCharacters.length && <Route exact path="/" render={() => <Home 
         featuredCharacter={this.state.featuredCharacter} 
         suggestedCharacters={this.state.suggestedCharacters} />} 
         />}

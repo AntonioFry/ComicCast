@@ -1,0 +1,31 @@
+.character-card {
+  align-items: flex-end;
+  background-size: 190px;
+  display: flex;
+  width: 170px;
+  height: 250px;
+}
+
+.character-card-img {
+  position: relative;
+  width: 170px;
+  height: 250px;
+  z-index: -1;
+}
+
+.character-card-text {
+  color: white;
+  z-index: 1;
+}
+
+.character-card-name-box {
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 10%;
+  padding: 0px 5px;
+  width: 100%;
+}
+
+.character-card-text {
+  width: 100%;
+  margin: 0px;
+}
