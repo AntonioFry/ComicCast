@@ -1,8 +1,11 @@
 .home-section {
   max-height: 900px;
+  padding: 50px;
 }
 
 .featured-character-article {
+  border: 1px solid black;
+  box-shadow: 4px 4px 20px;
   display: flex;
   height: 250px;
   margin: auto;

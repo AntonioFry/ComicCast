@@ -17,8 +17,8 @@ class Home extends Component {
         <article className="featured-character-article">
           <img className="featured-character-img" src={image.url} alt="featured character"/>
           <div className="featured-character-info">
-            <h2 className="featured-character-text">{name}</h2>
-            <p className="featured-character-text">{biography["full-name"]}</p>
+            <h2 className="featured-character-text">Name: {name}</h2>
+            <p className="featured-character-text">Full Name: {biography["full-name"]}</p>
           </div>
         </article>
         
