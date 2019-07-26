@@ -1,4 +1,5 @@
 .home-section {
+  background: url('../../images/Background-stock.jpg');
   max-height: 900px;
   padding: 50px;
 }
@@ -31,4 +32,8 @@
 
 h2 {
   margin: 0px 0px 10px
+}
+
+.suggested-character-heading {
+  margin: 100px 0px 0px;
 }

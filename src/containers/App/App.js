@@ -56,11 +56,11 @@ class App extends Component {
     return (
       <main>
         <NavBar />
-        {!this.state.suggestedCharacters.length && <img src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
+        {!this.state.suggestedCharacters.length && 
+        <img className="loading" src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
         {this.state.suggestedCharacters.length && <Route exact path="/" render={() => <Home 
         featuredCharacter={this.state.featuredCharacter} 
-        suggestedCharacters={this.state.suggestedCharacters} />} 
-        />}
+        suggestedCharacters={this.state.suggestedCharacters} />} />}
         {/* <Route exact path="/Favorites" render={() => <Favorites />} /> */}
         <Route exact path="/Search" render={() => <Search />} />
       </main>

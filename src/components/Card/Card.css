@@ -1,9 +1,12 @@
 .character-card {
   align-items: flex-end;
   background-size: 190px;
-  display: flex;
-  width: 170px;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  display: inline-block;
   height: 250px;
+  margin: 0px 30px;
+  min-width: 190px;
 }
 
 .character-card-img {
@@ -21,11 +24,12 @@
 .character-card-name-box {
   background-color: rgba(0, 0, 0, 0.65);
   height: 10%;
-  padding: 0px 5px;
+  position: relative;
+  top: 90%;
   width: 100%;
 }
 
 .character-card-text {
-  width: 100%;
-  margin: 0px;
+  height: 100%;
+  margin: 0px 5px;
 }
