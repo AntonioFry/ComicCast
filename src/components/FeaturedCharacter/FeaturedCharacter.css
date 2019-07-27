@@ -1,0 +1,25 @@
+.featured-character-article {
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px 1px;
+  display: flex;
+  height: 250px;
+  margin: auto;
+  width: 80%;
+}
+
+.featured-character-img {
+  box-shadow: 0 10px 0px -10px;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.featured-character-info {
+  box-shadow: -5px 1px 10px;
+  background-color: black;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.featured-character-text {
+  color: white;
+}

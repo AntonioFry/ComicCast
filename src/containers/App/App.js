@@ -29,7 +29,7 @@ class App extends Component {
       }
       this.setState({ suggestedCharacters });
     } catch (error) {
-      this.setState(error.message);
+      this.setState({ error: error.message });
     }
   }
 
@@ -53,13 +53,12 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.suggestedCharacters)
     return (
       <main>
         <NavBar />
-        {!this.state.suggestedCharacters.length && 
+        {!this.props.allCharacters.length && 
         <img className="loading" src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
-        {this.state.suggestedCharacters.length && <Route exact path="/" render={() => <Home 
+        {this.props.allCharacters.length && <Route exact path="/" render={() => <Home 
         featuredCharacter={this.state.featuredCharacter} 
         suggestedCharacters={this.state.suggestedCharacters} />} />}
         {/* <Route exact path="/Favorites" render={() => <Favorites />} /> */}
@@ -69,8 +68,12 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = (store) => ({
+  allCharacters: store.allCharacters
+})
+
 const mapDispatchToProps = (dispatch) => ({
   setCharacters: characters => dispatch(setCharacters(characters))
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
