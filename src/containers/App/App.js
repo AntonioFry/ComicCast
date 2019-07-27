@@ -5,8 +5,8 @@ import Home from '../../components/Home/Home';
 import { Route } from 'react-router-dom';
 import { getCharacters } from '../../api/apiCalls';
 import Search from '../../components/Seacrh/Search';
-import loadingGif from '../../images/Double-Ring.gif';
-import { throwStatement } from '@babel/types';
+import { connect } from 'react-redux';
+import { setCharacters } from '../../actions';
 
 class App extends Component {
   constructor() {
@@ -29,7 +29,7 @@ class App extends Component {
       }
       this.setState({ suggestedCharacters });
     } catch (error) {
-      this.setState(error.message);
+      this.setState({ error: error.message });
     }
   }
 
@@ -46,27 +46,32 @@ class App extends Component {
       this.setState({ allCharacters });
       this.getFeaturedCharacter();
       this.getRandomCharacters();
+      this.props.setCharacters(allCharacters)
     } catch (error) {
       this.setState({ error: error.message });
     }
   }
 
   render() {
-    console.log(this.state.suggestedCharacters)
     return (
       <main>
         <NavBar />
-        {!this.state.suggestedCharacters.length && 
+        {!this.props.allCharacters.length && 
         <img className="loading" src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
-        {this.state.suggestedCharacters.length && <Route exact path="/" render={() => <Home 
-        featuredCharacter={this.state.featuredCharacter} 
-        suggestedCharacters={this.state.suggestedCharacters} />} />}
+        {this.props.allCharacters.length && <Route exact path="/" render={() => <Home/>} />}
         {/* <Route exact path="/Favorites" render={() => <Favorites />} /> */}
         <Route exact path="/Search" render={() => <Search />} />
       </main>
     )
   }
-
 }
 
-export default App;
+const mapStateToProps = (store) => ({
+  allCharacters: store.allCharacters
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  setCharacters: characters => dispatch(setCharacters(characters))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
