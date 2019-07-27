@@ -58,9 +58,7 @@ class App extends Component {
         <NavBar />
         {!this.props.allCharacters.length && 
         <img className="loading" src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
-        {this.props.allCharacters.length && <Route exact path="/" render={() => <Home 
-        featuredCharacter={this.state.featuredCharacter} 
-        suggestedCharacters={this.state.suggestedCharacters} />} />}
+        {this.props.allCharacters.length && <Route exact path="/" render={() => <Home/>} />}
         {/* <Route exact path="/Favorites" render={() => <Favorites />} /> */}
         <Route exact path="/Search" render={() => <Search />} />
       </main>
