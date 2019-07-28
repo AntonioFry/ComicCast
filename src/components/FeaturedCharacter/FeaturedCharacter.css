@@ -2,9 +2,8 @@
   border: 1px solid black;
   box-shadow: 0px 0px 10px 1px;
   display: flex;
-  height: 250px;
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 
 .featured-character-img {

@@ -1,0 +1,42 @@
+.character-details-section {
+  display: flex;
+  padding: 100px
+}
+
+.general-info-article {
+  background-color: white;
+  border: 1px solid black;
+  width: 200px
+}
+
+.character-details-img {
+  border-bottom: 1px solid black; 
+  width: 200px;
+  height: 250px;
+}
+
+.details-name,
+.details-full-name {
+  margin: 15px 5px;
+}
+
+.details-right-section {
+  margin: 0px 0px 0px 20px;
+}
+
+.trivia-article,
+.overview-article {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.character-publisher,
+.details-first-appearance,
+.details-overview {
+  line-height: 1.5em;
+  margin: 10px 5px;
+}
+
+.trivia-header {
+  margin: 20px 0px 10px;
+}
