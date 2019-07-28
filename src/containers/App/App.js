@@ -58,11 +58,12 @@ class App extends Component {
       return <Route exact path={`/${character.id}`} 
         render={() => <CharacterDetails 
         id={character.id}
-        overview={character.path}
+        overview={character.overview}
         first_appearance={character.first_appearance}
         name={character.name}
         full_name={character.full_name}
         image={character.image}
+        key={character.id}
       />} />
     })
     return (
