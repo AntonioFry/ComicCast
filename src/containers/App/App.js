@@ -63,6 +63,7 @@ class App extends Component {
         name={character.name}
         full_name={character.full_name}
         image={character.image}
+        publisher={character.publisher}
         key={character.id}
       />} />
     })

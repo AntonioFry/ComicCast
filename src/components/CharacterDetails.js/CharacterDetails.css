@@ -17,7 +17,7 @@
 
 .details-name,
 .details-full-name {
-  margin: 10px 5px;
+  margin: 15px 5px;
 }
 
 .details-right-section {
@@ -30,6 +30,7 @@
   border: 1px solid black;
 }
 
+.character-publisher,
 .details-first-appearance,
 .details-overview {
   line-height: 1.5em;

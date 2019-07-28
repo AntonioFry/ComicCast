@@ -2,7 +2,7 @@ import React from 'react';
 import './CharacterDetails.css';
 
 const CharacterDetails = (props) => {
-  const { image, overview, name,  full_name, first_appearance } = props;
+  const { image, overview, name,  full_name, first_appearance, publisher } = props;
   return (
     <section className="character-details-section">
       <article className="general-info-article">
@@ -20,6 +20,7 @@ const CharacterDetails = (props) => {
         <h2 className="trivia-header" >Trivia</h2>
         <article className="trivia-article">
           <p className="details-first-appearance">First Appearance: {first_appearance}</p>
+          <p className="character-publisher">Publisher: {publisher}</p>
         </article>
       </section>
     </section>
