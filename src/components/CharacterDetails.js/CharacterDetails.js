@@ -4,7 +4,7 @@ import './CharacterDetails.css';
 const CharacterDetails = (props) => {
   const { image, overview, name,  full_name, first_appearance } = props;
   return (
-    <sectiom>
+    <section className="character-details-section">
       <article className="general-info-article">
         <img className="character-details-img" src={image} alt={`the character ${name}`}/>
         <div className="general-info-text-container">
@@ -12,14 +12,17 @@ const CharacterDetails = (props) => {
           <p className="details-full-name">Full Name: {full_name}</p>
         </div>
       </article>
-      <article>
-        <p className="details-overview">{overview}</p>
-      </article>
-      <h2>Trivia</h2>
-      <article>
-        <p className="details-first-appearance">{first_appearance}</p>
-      </article>
-    </sectiom>
+      <section className="details-right-section">
+        <h2 className="overview-header" >Overview</h2>
+        <article className="overview-article">
+          <p className="details-overview">Overview: {overview}</p>
+        </article>
+        <h2 className="trivia-header" >Trivia</h2>
+        <article className="trivia-article">
+          <p className="details-first-appearance">First Appearance: {first_appearance}</p>
+        </article>
+      </section>
+    </section>
   )
 }
 
