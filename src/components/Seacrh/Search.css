@@ -1,0 +1,11 @@
+.search-form {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.character-search-input {
+  font-size: 1.75em;
+  height: 40px;
+  width: 80%;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Search.css'
 import { connect } from 'react-redux';
 import { setSearchResult } from '../../actions';
 
