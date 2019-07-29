@@ -24,6 +24,17 @@ describe('apiCalls', () => {
     expect(window.fetch).toHaveBeenCalledWith(expected);
   });
 
-  it('should')
+  it('should return a parsed response if response is ok', () => {
+    expect(getCharacters()).resolves.toEqual(mockResponse);
+  })
+
+  it('should throw an error if response is not ok', () => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: false
+      });
+    });
+    expect(getCharacters()).resolves.toEqual('Failed to fetch characters');
+  });
 
 });
