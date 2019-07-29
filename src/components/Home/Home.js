@@ -4,7 +4,7 @@ import FeaturedCharacter from '../FeaturedCharacter/FeaturedCharacter';
 import './Home.css';
 
 
-const Home = () => {
+export const Home = () => {
     return (
       <section className="home-section">
         <h2 className="featured-character-heading">Featured Character</h2>

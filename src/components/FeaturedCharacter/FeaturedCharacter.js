@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './FeaturedCharacter.css'
 
-const FeaturedCharacter = (props) => {
+export const FeaturedCharacter = (props) => {
   console.log(props.allCharacters)
   const featuredCharacter = props.allCharacters[1]
   return (

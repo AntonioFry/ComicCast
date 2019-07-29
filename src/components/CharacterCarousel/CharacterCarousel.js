@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import './CharacterCarousel.css';
 import { connect } from 'react-redux';
 
-const CharacterCarousel = (props) => {
+export const CharacterCarousel = (props) => {
   let allCharacters = props.allCharacters.slice();
   let randomCharacters = [];
 

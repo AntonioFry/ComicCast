@@ -10,7 +10,7 @@ import { setCharacters } from '../../actions';
 import CharacterDetails from '../../components/CharacterDetails.js/CharacterDetails';
 import SearchResult from '../../components/SearchResults/SearchResults';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {

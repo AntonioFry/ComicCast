@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+<Link
+  to="/undefined"
+>
+  <div
+    className="character-card"
+    style={
+      Object {
+        "backgroundImage": "url(undefined)",
+      }
+    }
+  >
+    <div
+      className="character-card-name-box"
+    >
+      <h3
+        className="character-card-text"
+      />
+    </div>
+  </div>
+</Link>
+`;

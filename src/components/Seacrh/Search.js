@@ -3,7 +3,7 @@ import './Search.css'
 import { connect } from 'react-redux';
 import { setSearchResult } from '../../actions';
 
-class Search extends Component {
+export class Search extends Component {
   constructor() {
     super();
     this.state = {

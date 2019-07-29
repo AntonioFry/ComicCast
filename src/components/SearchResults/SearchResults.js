@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import './SearchResults.css'
 import { connect } from 'react-redux';
 
-const SeacrhResult = ({ allCharacters, search }) => {
+export const SeacrhResult = ({ allCharacters, search }) => {
   const filteredCharacters = allCharacters.filter(character => {
     return character.name.toLowerCase().includes(search);
   });
