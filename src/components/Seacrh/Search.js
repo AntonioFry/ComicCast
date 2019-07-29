@@ -11,12 +11,8 @@ class Search extends Component {
   }
 
   handleChange = async (e) => {
-    try {
-      await this.setState({ [e.target.name]: e.target.value });
-      this.handleSubmit(this.state.search);
-    } catch (error) {
-      console.log(error)
-    }
+    await this.setState({ [e.target.name]: e.target.value });
+    this.handleSubmit(this.state.search);
   }
 
   handleSubmit = (search) => {
