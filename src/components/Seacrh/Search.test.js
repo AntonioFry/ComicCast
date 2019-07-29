@@ -35,5 +35,5 @@ describe('Search', () => {
     wrapper.instance().handleSubmit = jest.fn();
     await wrapper.instance().handleChange(e);
     expect(wrapper.instance().handleSubmit).toHaveBeenCalled();
-  })
+  });
 });
