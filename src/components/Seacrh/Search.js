@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { setSearchResult } from '../../actions';
 
 export class Search extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       search: '',
     }

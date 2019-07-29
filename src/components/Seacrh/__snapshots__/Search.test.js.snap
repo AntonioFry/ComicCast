@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should match the snapshot 1`] = `
+<form
+  className="search-form"
+>
+  <input
+    className="character-search-input"
+    name="search"
+    onChange={[Function]}
+    placeholder="Search for a character"
+    value=""
+  />
+</form>
+`;
