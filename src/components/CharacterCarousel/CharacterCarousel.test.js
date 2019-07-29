@@ -8,7 +8,7 @@ describe('CharacterCarousel', () => {
 
   beforeEach(() => {
     props = {
-      allCharacters: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+      allCharacters: [{}, {}, {}, {}, {}]
     }
     wrapper = shallow(<CharacterCarousel allCharacters={props.allCharacters}/>)
   });
@@ -25,6 +25,6 @@ describe('CharacterCarousel', () => {
 
   it('should change state when getRandomCharacters', () => {
     wrapper.instance().getRandomCharacters();
-    expect(wrapper.state('randomCharacters')).toEqual
+    expect(wrapper.state('randomCharacters').length).toEqual(5)
   });
 });
