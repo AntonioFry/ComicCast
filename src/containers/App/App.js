@@ -14,43 +14,16 @@ export class App extends Component {
   constructor() {
     super();
     this.state = {
-      allCharacters: [],
-      featuredCharacter: {},
-      suggestedCharacters: [],
       error: ''
     }
   }
 
-  // getRandomCharacters = async () => {
-  //   try {
-  //     const suggestedCharacters = [];
-  //     for (let i = 0; i < 5; i++) {
-  //       const randomNumber = Math.floor(Math.random() * 26);
-  //       const character = this.state.allCharacters[randomNumber]
-  //       suggestedCharacters.push(character);
-  //     }
-  //     this.setState({ suggestedCharacters });
-  //   } catch (error) {
-  //     this.setState({ error: error.message });
-  //   }
-  // }
-
-  // getFeaturedCharacter = () => {
-  //   const randomNumber = Math.floor(Math.random() * 20);
-  //   const featuredCharacter = this.state.allCharacters[randomNumber];
-  //   this.setState({ featuredCharacter });
-  // }
-
   componentDidMount = async () => {
     try {
       const allCharacters = await getCharacters();
-      console.log(this.state.allCharacters)
-      this.setState({ allCharacters });
-      // this.getFeaturedCharacter();
-      // this.getRandomCharacters();
       this.props.setCharacters(allCharacters)
     } catch (error) {
-      this.setState({ error: error.message });
+      this.setState({ error: "failed to fetch characters" });
     }
   }
 

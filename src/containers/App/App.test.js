@@ -17,6 +17,13 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  
-
+  it.skip('should only set state of error if componentDidMount catches error', () => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: false
+      })
+    });
+    wrapper.instance().componentDidMount();
+    expect(wrapper.state('error')).toEqual("failed to fetch characters")
+  });
 });
