@@ -8,6 +8,7 @@ import Search from '../../components/Seacrh/Search';
 import { connect } from 'react-redux';
 import { setCharacters } from '../../actions';
 import CharacterDetails from '../../components/CharacterDetails.js/CharacterDetails';
+import SearchResult from '../../components/SearchResults/SearchResults';
 
 class App extends Component {
   constructor() {
@@ -65,16 +66,21 @@ class App extends Component {
         image={character.image}
         publisher={character.publisher}
         key={character.id}
-      />} />
+      />}/>
     })
     return (
       <main>
         <NavBar />
         {!this.props.allCharacters.length && 
         <img className="loading" src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
-        {this.props.allCharacters.length && <Route exact path="/" render={() => <Home/>} />}
+        {this.props.allCharacters.length && <Route exact path="/" render={() => <Home/>}/>}
         {/* <Route exact path="/Favorites" render={() => <Favorites />} /> */}
-        <Route exact path="/Search" render={() => <Search />} />
+        <Route exact path="/Search" render={() =>
+          <>
+            <Search />
+            <SearchResult />
+          </>
+        }/>
         {routes}
       </main>
     )
