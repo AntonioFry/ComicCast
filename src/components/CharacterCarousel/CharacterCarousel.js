@@ -3,32 +3,47 @@ import Card from '../Card/Card';
 import './CharacterCarousel.css';
 import { connect } from 'react-redux';
 
-export const CharacterCarousel = (props) => {
-  let allCharacters = props.allCharacters.slice();
-  let randomCharacters = [];
-
-  for (let i = 0; i < 5; i++) {
-    const randomNumber = Math.floor(Math.random() * allCharacters.length - 1);
-    const character = allCharacters.splice(randomNumber, 1);
-    randomCharacters.push(...character)
+export class CharacterCarousel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      randomCharacters: []
+    }
   }
 
-  const characters = randomCharacters.map(character => {
-    return (
-      <Card
-        name={character.name}
-        id={character.id}
-        image={character.image}
-        key={character.id}
-      />
-    )
-  })
+  componentDidMount() {
+    this.getRandomCharacters();
+  }
 
-  return (
-    <section className="carousel-section">
-      {characters}
-    </section>
-  )
+  getRandomCharacters = () => {
+    let allCharacters = this.props.allCharacters.slice();
+    let randomCharacters = [];
+  
+    for (let i = 0; i < 5; i++) {
+      const randomNumber = Math.floor(Math.random() * allCharacters.length - 1);
+      const character = allCharacters.splice(randomNumber, 1);
+      randomCharacters.push(...character)
+    }
+    this.setState({ randomCharacters })
+  }
+  
+  render() {
+    const characters = this.state.randomCharacters.map(character => {
+      return (
+        <Card
+          name={character.name}
+          id={character.id}
+          image={character.image}
+          key={character.id}
+        />
+      )
+    })
+    return (
+      <section className="carousel-section">
+        {characters}
+      </section>
+    )
+  }
 }
 
 const mapStateToProps = (store) => ({
