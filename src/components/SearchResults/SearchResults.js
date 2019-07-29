@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import './SearchResults.css'
 import { connect } from 'react-redux';
 
-export const SeacrhResult = ({ allCharacters, search }) => {
+export const SearchResults = ({ allCharacters, search }) => {
   const filteredCharacters = allCharacters.filter(character => {
     return character.name.toLowerCase().includes(search);
   });
@@ -29,4 +29,4 @@ const mapStateToProps = (store) => ({
   search: store.search
 });
 
-export default connect(mapStateToProps)(SeacrhResult);
+export default connect(mapStateToProps)(SearchResults);

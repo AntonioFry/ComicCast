@@ -8,7 +8,7 @@ import Search from '../../components/Seacrh/Search';
 import { connect } from 'react-redux';
 import { setCharacters } from '../../actions';
 import CharacterDetails from '../../components/CharacterDetails.js/CharacterDetails';
-import SearchResult from '../../components/SearchResults/SearchResults';
+import SearchResults from '../../components/SearchResults/SearchResults';
 
 export class App extends Component {
   constructor() {
@@ -51,7 +51,7 @@ export class App extends Component {
         <Route exact path="/Search" render={() =>
           <>
             <Search />
-            <SearchResult />
+            <SearchResults />
           </>
         }/>
         {routes}
