@@ -21,7 +21,7 @@ class Search extends Component {
 
   render() {
     return (
-      <form>
+      <form className="search-form">
         <input
           className="character-search-input"
           placeholder="Search for a character"
