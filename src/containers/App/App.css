@@ -1,6 +1,7 @@
 main {
   background: url('../../images/Background-stock.jpg');
-  height: 700px;
+  background-repeat: repeat;
+  min-height: 700px;
 }
 
 .loading {

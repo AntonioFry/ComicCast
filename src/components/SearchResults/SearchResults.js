@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from '../Card/Card';
+import './SearchResults.css'
 import { connect } from 'react-redux';
 
 const SeacrhResult = ({ allCharacters, search }) => {
   const filteredCharacters = allCharacters.filter(character => {
-    return character.name.includes(search)
+    return character.name.toLowerCase().includes(search);
   });
   const characterCards = filteredCharacters.map(character => {
     return (
@@ -17,7 +18,7 @@ const SeacrhResult = ({ allCharacters, search }) => {
     )
   });
   return (
-    <section>
+    <section className="search-results">
       {characterCards}
     </section>
   )

@@ -16,7 +16,7 @@ class Search extends Component {
   }
 
   handleSubmit = (search) => {
-    this.props.setSearchResult(search);
+    this.props.setSearchResult(search.toLowerCase());
   }
 
   render() {
