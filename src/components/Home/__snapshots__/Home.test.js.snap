@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should match the snapshot 1`] = `
+<section
+  className="home-section"
+>
+  <h2
+    className="featured-character-heading"
+  >
+    Featured Character
+  </h2>
+  <Connect(FeaturedCharacter) />
+  <h2
+    className="suggested-character-heading"
+  >
+    Suggested Characters
+  </h2>
+  <Connect(CharacterCarousel) />
+</section>
+`;
