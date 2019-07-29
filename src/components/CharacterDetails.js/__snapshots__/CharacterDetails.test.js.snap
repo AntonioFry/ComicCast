@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterDetails should match the snapshot 1`] = `
+<section
+  className="character-details-section"
+>
+  <article
+    className="general-info-article"
+  >
+    <img
+      alt="the character "
+      className="character-details-img"
+      src=""
+    />
+    <div
+      className="general-info-text-container"
+    >
+      <p
+        className="details-name"
+      >
+        Name: 
+      </p>
+      <p
+        className="details-full-name"
+      >
+        Full Name: 
+      </p>
+    </div>
+  </article>
+  <section
+    className="details-right-section"
+  >
+    <h2
+      className="overview-header"
+    >
+      Overview
+    </h2>
+    <article
+      className="overview-article"
+    >
+      <p
+        className="details-overview"
+      >
+        Overview: 
+      </p>
+    </article>
+    <h2
+      className="trivia-header"
+    >
+      Trivia
+    </h2>
+    <article
+      className="trivia-article"
+    >
+      <p
+        className="details-first-appearance"
+      >
+        First Appearance: 
+      </p>
+      <p
+        className="character-publisher"
+      >
+        Publisher: 
+      </p>
+    </article>
+  </section>
+</section>
+`;

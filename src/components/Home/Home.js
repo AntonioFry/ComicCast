@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CharacterCarousel from '../CharacterCarousel/CharacterCarousel';
 import FeaturedCharacter from '../FeaturedCharacter/FeaturedCharacter';
 import './Home.css';

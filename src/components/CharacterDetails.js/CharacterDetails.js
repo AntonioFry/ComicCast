@@ -1,7 +1,7 @@
 import React from 'react';
 import './CharacterDetails.css';
 
-const CharacterDetails = (props) => {
+export const CharacterDetails = (props) => {
   const { image, overview, name,  full_name, first_appearance, publisher } = props;
   return (
     <section className="character-details-section">

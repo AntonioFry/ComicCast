@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import './FeaturedCharacter.css'
 
 export const FeaturedCharacter = (props) => {
-  console.log(props.allCharacters)
   const featuredCharacter = props.allCharacters[1]
   return (
     <article className="featured-character-article">
