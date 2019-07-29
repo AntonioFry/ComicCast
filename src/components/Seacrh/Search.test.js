@@ -25,5 +25,15 @@ describe('Search', () => {
     expect(wrapper.state('search')).toEqual('something');
   })
 
-  it
+  it('should invoke handleChange on keyUp in the input', () => {
+    wrapper.instance().handleChange = jest.fn();
+    wrapper.find('.character-search-input').simulate('change', { value: 'something' });
+    expect(wrapper.instance().handleChange).toHaveBeenCalled();
+  });
+
+  it('should invoke handleSubmit when handleChange is invoked', async () => {
+    wrapper.instance().handleSubmit = jest.fn();
+    await wrapper.instance().handleChange(e);
+    expect(wrapper.instance().handleSubmit).toHaveBeenCalled();
+  })
 });
