@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CharacterCarousel CharacterCarousel component should match the snapshot 1`] = `
+<section
+  className="carousel-section"
+>
+  <Card />
+  <Card />
+  <Card />
+  <Card />
+  <Card />
+</section>
+`;
+
 exports[`CharacterCarousel should match the snapshot 1`] = `
 <section
   className="carousel-section"

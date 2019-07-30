@@ -46,7 +46,7 @@ export class CharacterCarousel extends Component {
   }
 }
 
-const mapStateToProps = (store) => ({
+export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters
 })
 

@@ -16,7 +16,7 @@ export const FeaturedCharacter = (props) => {
   )
 }
 
-const mapStateToProps = (store) => ({
+export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters,
 });
 
