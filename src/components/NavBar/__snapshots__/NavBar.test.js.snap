@@ -16,12 +16,6 @@ exports[`NavBar should match the snapshot 1`] = `
     </NavLink>
     <NavLink
       className="navigation-links"
-      to="/Favorites"
-    >
-      Favorites
-    </NavLink>
-    <NavLink
-      className="navigation-links"
       to="/Search"
     >
       Search
