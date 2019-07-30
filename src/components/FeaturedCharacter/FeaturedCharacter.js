@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './FeaturedCharacter.css'
+import PropTypes from 'prop-types';
 
 export const FeaturedCharacter = (props) => {
   const featuredCharacter = props.allCharacters[1]
@@ -19,5 +20,9 @@ export const FeaturedCharacter = (props) => {
 export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters,
 });
+
+FeaturedCharacter.propTypes = {
+  allCharacters: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps)(FeaturedCharacter);

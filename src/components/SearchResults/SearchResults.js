@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import './SearchResults.css'
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
 export const SearchResults = ({ allCharacters, search }) => {
   const filteredCharacters = allCharacters.filter(character => {
@@ -28,5 +29,10 @@ export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters,
   search: store.search
 });
+
+SearchResults.propTypes = {
+  allCharacters: PropTypes.array.isRequired,
+  search: PropTypes.array.isRequired
+}
 
 export default connect(mapStateToProps)(SearchResults);

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Card from '../Card/Card';
 import './CharacterCarousel.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export class CharacterCarousel extends Component {
   constructor(props) {
@@ -49,5 +50,9 @@ export class CharacterCarousel extends Component {
 export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters
 })
+
+CharacterCarousel.propTypes = {
+  allCharacters: PropTypes.array.isRequired
+}
 
 export default connect(mapStateToProps)(CharacterCarousel);

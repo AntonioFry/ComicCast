@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import { setCharacters } from '../../actions';
 import CharacterDetails from '../../components/CharacterDetails.js/CharacterDetails';
 import SearchResults from '../../components/SearchResults/SearchResults';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
   constructor() {
@@ -66,6 +67,11 @@ export const mapStateToProps = (store) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   setCharacters: characters => dispatch(setCharacters(characters))
-})
+});
+
+App.propTypes = {
+  allCharacters: PropTypes.array.isRequired,
+  setCharacters: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

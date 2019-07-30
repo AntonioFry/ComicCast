@@ -1,5 +1,6 @@
 import React from 'react';
 import './CharacterDetails.css';
+import PropTypes from 'prop-types';
 
 export const CharacterDetails = (props) => {
   const { image, overview, name,  full_name, first_appearance, publisher } = props;
@@ -25,6 +26,15 @@ export const CharacterDetails = (props) => {
       </section>
     </section>
   )
+}
+
+CharacterDetails.propTypes = {
+  image: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  full_name: PropTypes.string.isRequired,
+  first_appearance: PropTypes.string.isRequired,
+  publisher: PropTypes.string.isRequired
 }
 
 export default CharacterDetails;
