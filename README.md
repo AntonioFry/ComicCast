@@ -28,3 +28,6 @@ In building this app mya main goals were to:
 
 ## Screenshots
 
+![website demo 1](https://media.giphy.com/media/l2vd3aCJhBo3VI6smr/giphy.gif)
+
+![website demo 2](https://media.giphy.com/media/QvYwuwNv7PcEYNUXky/giphy.gif)
