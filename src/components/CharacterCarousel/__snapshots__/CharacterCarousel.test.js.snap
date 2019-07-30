@@ -11,15 +11,3 @@ exports[`CharacterCarousel CharacterCarousel component should match the snapshot
   <Card />
 </section>
 `;
-
-exports[`CharacterCarousel should match the snapshot 1`] = `
-<section
-  className="carousel-section"
->
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-</section>
-`;

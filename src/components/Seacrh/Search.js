@@ -35,7 +35,7 @@ export class Search extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   setSearchResult: search => dispatch(setSearchResult(search))
 })
 
