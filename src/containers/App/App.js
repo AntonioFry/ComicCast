@@ -60,11 +60,11 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = (store) => ({
+export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   setCharacters: characters => dispatch(setCharacters(characters))
 })
 

@@ -43,10 +43,13 @@ describe('Search', () => {
   });
 
   describe('mapDispatchToProps', () => {
-    const mockDispatch = jest.fn();
-    const actionToDispatch = setSearchResult("search")
-    const mappedProps = mapDispatchToProps(mockDispatch);
-    mappedProps.setSearchResult("search");
-    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+
+    it('should call dispatch with setSearchResult action', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = setSearchResult("search")
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      mappedProps.setSearchResult("search");
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
   });
 });
