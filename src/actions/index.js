@@ -1,7 +1,12 @@
-// export const favoriteCharacter = (characterId) => ({
-//   type: "FAVORITE_CHARACTER",
-//   characterId
-// });
+export const favoriteCharacter = (characterId) => ({
+  type: "FAVORITE_CHARACTER",
+  characterId
+});
+
+export const  unfavoriteCharacter = (characterId) => ({
+  type: "UNFAVORITE_CHARACTER",
+  characterId
+})
 
 export const setCharacters = (characters) => ({
   type: "SET_CHARACTERS",
