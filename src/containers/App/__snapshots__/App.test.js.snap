@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App App component should match the snapshot 1`] = `
+<main>
+  <NavBar />
+  <Route
+    exact={true}
+    path="/"
+    render={[Function]}
+  />
+  <Route
+    exact={true}
+    path="/Search"
+    render={[Function]}
+  />
+  <Route
+    exact={true}
+    path="/undefined"
+    render={[Function]}
+  />
+  <Route
+    exact={true}
+    path="/undefined"
+    render={[Function]}
+  />
+</main>
+`;

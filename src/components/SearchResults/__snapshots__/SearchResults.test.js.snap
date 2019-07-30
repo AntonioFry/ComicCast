@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResults SearchResults should match the snapshot 1`] = `
+<section
+  className="search-results"
+>
+  <Card
+    id={1}
+    image="image.jpg"
+    key="1"
+    name="guy"
+  />
+  <Card
+    id={2}
+    image="image.jpg"
+    key="2"
+    name="peep"
+  />
+  <Card
+    id={3}
+    image="image.jpg"
+    key="3"
+    name="gal"
+  />
+  <Card
+    id={4}
+    image="image.jpg"
+    key="4"
+    name="dude"
+  />
+</section>
+`;

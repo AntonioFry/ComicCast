@@ -2,8 +2,9 @@ import React from 'react';
 import Card from '../Card/Card';
 import './SearchResults.css'
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
-const SeacrhResult = ({ allCharacters, search }) => {
+export const SearchResults = ({ allCharacters, search }) => {
   const filteredCharacters = allCharacters.filter(character => {
     return character.name.toLowerCase().includes(search);
   });
@@ -24,9 +25,14 @@ const SeacrhResult = ({ allCharacters, search }) => {
   )
 }
 
-const mapStateToProps = (store) => ({
+export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters,
   search: store.search
 });
 
-export default connect(mapStateToProps)(SeacrhResult);
+SearchResults.propTypes = {
+  allCharacters: PropTypes.array.isRequired,
+  search: PropTypes.array.isRequired
+}
+
+export default connect(mapStateToProps)(SearchResults);

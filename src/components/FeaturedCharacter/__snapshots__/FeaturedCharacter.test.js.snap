@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedCharacter FeaturedCharacter component should match the snapshot 1`] = `
+<article
+  className="featured-character-article"
+>
+  <img
+    alt="featured character"
+    className="featured-character-img"
+  />
+  <div
+    className="featured-character-info"
+  >
+    <h2
+      className="featured-character-text"
+    >
+      Name: 
+      person
+    </h2>
+    <p
+      className="featured-character-text"
+    >
+      Full Name: 
+      person person
+    </p>
+    <p
+      className="featured-character-text"
+    >
+      Overview: 
+      yeah
+    </p>
+  </div>
+</article>
+`;

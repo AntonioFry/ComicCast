@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './Search.css'
 import { connect } from 'react-redux';
 import { setSearchResult } from '../../actions';
+import PropTypes from 'prop-types';
 
-class Search extends Component {
-  constructor() {
-    super();
+export class Search extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       search: '',
     }
@@ -35,8 +36,12 @@ class Search extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   setSearchResult: search => dispatch(setSearchResult(search))
 })
+
+Search.propTypes = {
+  setSearchResult: PropTypes.func.isRequired
+}
 
 export default connect(null, mapDispatchToProps)(Search);

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
-const NavBar = () => {
+export const NavBar = () => {
   return (
     <nav>
       <h1>ComicCast</h1>

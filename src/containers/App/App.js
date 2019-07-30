@@ -8,49 +8,23 @@ import Search from '../../components/Seacrh/Search';
 import { connect } from 'react-redux';
 import { setCharacters } from '../../actions';
 import CharacterDetails from '../../components/CharacterDetails.js/CharacterDetails';
-import SearchResult from '../../components/SearchResults/SearchResults';
+import SearchResults from '../../components/SearchResults/SearchResults';
+import PropTypes from 'prop-types';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {
-      allCharacters: [],
-      featuredCharacter: {},
-      suggestedCharacters: [],
       error: ''
     }
-  }
-
-  getRandomCharacters = async () => {
-    try {
-      const suggestedCharacters = [];
-      for (let i = 0; i < 5; i++) {
-        const randomNumber = Math.floor(Math.random() * 26);
-        const character = this.state.allCharacters[randomNumber]
-        suggestedCharacters.push(character);
-      }
-      this.setState({ suggestedCharacters });
-    } catch (error) {
-      this.setState({ error: error.message });
-    }
-  }
-
-  getFeaturedCharacter = () => {
-    const randomNumber = Math.floor(Math.random() * 20);
-    const featuredCharacter = this.state.allCharacters[randomNumber];
-    this.setState({ featuredCharacter });
   }
 
   componentDidMount = async () => {
     try {
       const allCharacters = await getCharacters();
-      console.log(this.state.allCharacters)
-      this.setState({ allCharacters });
-      this.getFeaturedCharacter();
-      this.getRandomCharacters();
       this.props.setCharacters(allCharacters)
     } catch (error) {
-      this.setState({ error: error.message });
+      this.setState({ error: "failed to fetch characters" });
     }
   }
 
@@ -78,7 +52,7 @@ class App extends Component {
         <Route exact path="/Search" render={() =>
           <>
             <Search />
-            <SearchResult />
+            <SearchResults />
           </>
         }/>
         {routes}
@@ -87,12 +61,17 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (store) => ({
+export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   setCharacters: characters => dispatch(setCharacters(characters))
-})
+});
+
+App.propTypes = {
+  allCharacters: PropTypes.array.isRequired,
+  setCharacters: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
