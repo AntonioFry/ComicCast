@@ -24,7 +24,7 @@ export const SearchResults = ({ allCharacters, search }) => {
   )
 }
 
-const mapStateToProps = (store) => ({
+export const mapStateToProps = (store) => ({
   allCharacters: store.allCharacters,
   search: store.search
 });
