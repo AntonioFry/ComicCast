@@ -4,8 +4,8 @@
   background-repeat: no-repeat;
   border: 1px solid black;
   display: flex;
+  flex-wrap: wrap;
   height: 250px;
-  
   width: 190px;
 }
 
@@ -35,4 +35,9 @@
 .card-link {
   margin: 0px auto;
   width: 190px;
+}
+
+.bookmark-img {
+  margin: 5px 5px auto auto;
+  width: 10%;
 }
