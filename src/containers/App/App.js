@@ -10,6 +10,7 @@ import { setCharacters } from '../../actions';
 import CharacterDetails from '../../components/CharacterDetails.js/CharacterDetails';
 import SearchResults from '../../components/SearchResults/SearchResults';
 import PropTypes from 'prop-types';
+import Favorites from '../../components/Favorites/Favorites';
 
 export class App extends Component {
   constructor() {
@@ -48,7 +49,7 @@ export class App extends Component {
         {!this.props.allCharacters.length && 
         <img className="loading" src={require('../../images/Double-Ring.gif')} alt="a loading icon"/>}
         {this.props.allCharacters.length && <Route exact path="/" render={() => <Home/>}/>}
-        {/* <Route exact path="/Favorites" render={() => <Favorites />} /> */}
+        <Route exact path="/Favorites" render={() => <Favorites />} />
         <Route exact path="/Search" render={() =>
           <>
             <Search />
