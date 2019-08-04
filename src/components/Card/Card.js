@@ -6,16 +6,11 @@ import { setSearchResult } from '../../actions';
 import { connect } from 'react-redux';
 
 export const Card = ({ name, id, image, setSearchResult, favorite }) => {
-  let bookmarkImg;
-  if (favorite === true) {
-    bookmarkImg = '../../images/bookmark-black.svg';
-  } else {
-    bookmarkImg = '../../images/bookmark-white.svg';
-  }
+  const bookmarkImg = `bookmark-${favorite && "active"}`
   return (
     <Link className="card-link" to={`/${id}`} onClick={() => setSearchResult("")}>
       <div className="character-card" style={{backgroundImage: `url(${image})`}}>
-        <img className="bookmark-img" src={require(bookmarkImg)} alt='bookmark icon'/>
+        <button className={bookmarkImg}></button>
         <div className="character-card-name-box">
           <h3 className="character-card-text">{name}</h3>
         </div>
