@@ -15,6 +15,7 @@ export const SearchResults = ({ allCharacters, search }) => {
         id={character.id}
         image={character.image}
         key={character.id}
+        favorite={character.favorite}
       />
     )
   });

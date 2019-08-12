@@ -36,6 +36,7 @@ export class CharacterCarousel extends Component {
           id={character.id}
           image={character.image}
           key={character.id}
+          favorite={character.favorite}
         />
       )
     })

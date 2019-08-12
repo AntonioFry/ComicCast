@@ -9,7 +9,6 @@
 .featured-character-img {
   box-shadow: 0 10px 0px -10px;
   max-width: 250px;
-  max-height: 250px;
 }
 
 .featured-character-info {
@@ -19,6 +18,11 @@
   width: 100%;
 }
 
+.featured-character-header {
+  color: white;
+}
+
 .featured-character-text {
   color: white;
+  font-size: 1.25em;
 }

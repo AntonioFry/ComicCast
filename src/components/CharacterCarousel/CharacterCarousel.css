@@ -1,7 +1,9 @@
 .carousel-section {
   align-items: center;
   /* border: 1px solid black; */
-  display: flex;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
   height: 300px;
   margin: 0px 0px 50px;
   overflow: hidden;
