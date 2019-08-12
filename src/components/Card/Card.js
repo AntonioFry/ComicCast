@@ -2,15 +2,25 @@ import React from 'react';
 import './Card.css'
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { setSearchResult } from '../../actions';
+import { setSearchResult, favoriteCharacter, unfavoriteCharacter, changeFavoriteState } from '../../actions';
 import { connect } from 'react-redux';
 
-export const Card = ({ name, id, image, setSearchResult, favorite }) => {
+export const Card = ({ name, id, image, setSearchResult, favorite, unfavoriteCharacter, favoriteCharacter, changeFavoriteState }) => {
   const bookmarkImg = `bookmark-${favorite && "active"}`
+  const favoriteAction = (e) => {
+    e.preventDefault();
+    if (favorite === true) {
+      unfavoriteCharacter(id);
+      changeFavoriteState(id);
+    } else {
+      favoriteCharacter(id); 
+      changeFavoriteState(id);
+    }
+  };
   return (
     <Link className="card-link" to={`/${id}`} onClick={() => setSearchResult("")}>
       <div className="character-card" style={{backgroundImage: `url(${image})`}}>
-        <button className={bookmarkImg}></button>
+        <button className={bookmarkImg} onClick={(e) => favoriteAction(e)}></button>
         <div className="character-card-name-box">
           <h3 className="character-card-text">{name}</h3>
         </div>
@@ -20,7 +30,10 @@ export const Card = ({ name, id, image, setSearchResult, favorite }) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  setSearchResult: search => dispatch(setSearchResult(search))
+  setSearchResult: search => dispatch(setSearchResult(search)),
+  favoriteCharacter: characterId => dispatch(favoriteCharacter(characterId)),
+  unfavoriteCharacter: characterId => dispatch(unfavoriteCharacter(characterId)),
+  changeFavoriteState: characterId => dispatch(changeFavoriteState(characterId)),
 })
 
 Card.propTypes = {

@@ -17,3 +17,8 @@ export const setSearchResult = (search) => ({
   type: "SET_SEARCH_RESULT",
   search
 });
+
+export const changeFavoriteState = (characterId) => ({
+  type: "CHANGE_FAVORITE_STATE",
+  characterId
+})

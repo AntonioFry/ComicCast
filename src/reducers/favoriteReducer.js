@@ -4,9 +4,8 @@ export const favoriteReducer = (state = [], action) => {
       return [...state, action.characterId];
 
     case "UNFAVORITE_CHARACTER":
-      const idIndex = state.findIndex(id => id === action.characterId);
-      state.splice(idIndex, 1);
-      return state;
+      const favorites = state.filter(characterId => characterId !== action.characterId);
+      return favorites;
       
     default:
       return state;
