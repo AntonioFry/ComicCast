@@ -17,7 +17,7 @@ export const Favorites = ({ allCharacters }) => {
     )
   });
   return (
-    <section>
+    <section className="favorites">
       {cards}
     </section>
   )

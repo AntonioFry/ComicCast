@@ -1,3 +1,10 @@
 .construction-gif {
   width: 100%;
 }
+
+.favorites {
+  display: grid;
+  grid-gap: 20px 0px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px;
+}
