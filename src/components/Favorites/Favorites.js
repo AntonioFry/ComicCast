@@ -4,12 +4,9 @@ import './Favorites.css';
 
 export const Favorites = () => {
   return (
-    <>
-      <h2>Favorites</h2>
-      <section>
-        <img className="construction-gif" src={require('../../images/underConstruction.gif')} />
-      </section>
-    </>
+    <section>
+       
+    </section>
   )
 }
 

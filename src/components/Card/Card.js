@@ -2,20 +2,14 @@ import React from 'react';
 import './Card.css'
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { setSearchResult, favoriteCharacter, unfavoriteCharacter, changeFavoriteState } from '../../actions';
+import { setSearchResult, changeFavoriteState } from '../../actions';
 import { connect } from 'react-redux';
 
-export const Card = ({ name, id, image, setSearchResult, favorite, unfavoriteCharacter, favoriteCharacter, changeFavoriteState }) => {
+export const Card = ({ name, id, image, setSearchResult, favorite, changeFavoriteState }) => {
   const bookmarkImg = `bookmark-${favorite && "active"}`
   const favoriteAction = (e) => {
     e.preventDefault();
-    if (favorite === true) {
-      unfavoriteCharacter(id);
-      changeFavoriteState(id);
-    } else {
-      favoriteCharacter(id); 
-      changeFavoriteState(id);
-    }
+    changeFavoriteState(id);
   };
   return (
     <Link className="card-link" to={`/${id}`} onClick={() => setSearchResult("")}>
@@ -31,8 +25,6 @@ export const Card = ({ name, id, image, setSearchResult, favorite, unfavoriteCha
 
 const mapDispatchToProps = (dispatch) => ({
   setSearchResult: search => dispatch(setSearchResult(search)),
-  favoriteCharacter: characterId => dispatch(favoriteCharacter(characterId)),
-  unfavoriteCharacter: characterId => dispatch(unfavoriteCharacter(characterId)),
   changeFavoriteState: characterId => dispatch(changeFavoriteState(characterId)),
 })
 
