@@ -4,7 +4,8 @@ import './FeaturedCharacter.css'
 import PropTypes from 'prop-types';
 
 export const FeaturedCharacter = (props) => {
-  const featuredCharacter = props.allCharacters[1]
+  const randomIndex = Math.floor(Math.random() * props.allCharacters.length);
+  const featuredCharacter = props.allCharacters[randomIndex];
   return (
     <article className="featured-character-article">
       <img className="featured-character-img" src={featuredCharacter.image} alt="featured character" />
