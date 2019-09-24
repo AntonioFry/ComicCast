@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 
 export const CharacterDetails = (props) => {
   const { image, overview, name,  full_name, first_appearance, publisher } = props;
+  let publisherImage;
+  if (props.publisher === 'Marvel') {
+    publisherImage = require('../../images/marvel.png');
+  } else {
+    publisherImage = require('../../images/dc.png');
+  }
   return (
     <section className="character-details-section">
       <article className="general-info-article">
@@ -21,7 +27,7 @@ export const CharacterDetails = (props) => {
         <h2 className="trivia-header" >Trivia</h2>
         <article className="trivia-article">
           <p className="details-first-appearance">First Appearance: {first_appearance}</p>
-          <p className="character-publisher">Publisher: {publisher}</p>
+          <p className="character-publisher">Publisher: <img src={publisherImage} alt='publisher logo'/></p>
         </article>
       </section>
     </section>
