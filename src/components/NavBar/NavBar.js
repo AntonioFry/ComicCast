@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 export const NavBar = ({ setSearchResult }) => {
   return (
     <nav>
-      <h1>ComicCast</h1>
+      <h1>Comic Cast</h1>
       <div className="navigation-links-container">
         <NavLink className="navigation-links" to="/" onClick={() => setSearchResult("")}>Home</NavLink>
         <NavLink className="navigation-links" to="/Favorites" onClick={() => setSearchResult("")}>Favorites</NavLink>

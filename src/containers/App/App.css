@@ -1,3 +1,8 @@
+* {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+}
+
 main {
   background: url('../../images/Background-stock.jpg');
   background-repeat: repeat;
