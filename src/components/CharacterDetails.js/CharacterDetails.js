@@ -27,7 +27,7 @@ export const CharacterDetails = (props) => {
         <h2 className="trivia-header" >Trivia</h2>
         <article className="trivia-article">
           <p className="details-first-appearance">First Appearance: {first_appearance}</p>
-          <p className="character-publisher">Publisher: <img src={publisherImage} alt='publisher logo'/></p>
+          <p className="character-publisher">Publisher: <img class="publisher-logo" src={publisherImage} alt='publisher logo'/></p>
         </article>
       </section>
     </section>

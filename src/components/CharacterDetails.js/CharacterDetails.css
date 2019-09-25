@@ -33,10 +33,17 @@
 .character-publisher,
 .details-first-appearance,
 .details-overview {
+  align-items: center;
+  display: flex;
   line-height: 1.5em;
   margin: 10px 5px;
 }
 
 .trivia-header {
   margin: 20px 0px 10px;
+}
+
+.publisher-logo {
+  width: 50px;
+  margin: 0px 10px;
 }
