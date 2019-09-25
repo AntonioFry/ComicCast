@@ -4,7 +4,9 @@
 }
 
 .general-info-article {
-  background-color: white;
+  background: url('../../images/yellow-dotted-background.png');
+  background-size: 280px;
+  background-repeat: repeat;
   border: 1px solid black;
   width: 200px
 }
@@ -26,7 +28,9 @@
 
 .trivia-article,
 .overview-article {
-  background-color: white;
+  background: url('../../images/yellow-dotted-background.png');
+  background-size: 280px;
+  background-repeat: repeat;
   border: 1px solid black;
 }
 
